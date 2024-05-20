@@ -16,6 +16,7 @@ class Book(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
     deleted_at = models.DateTimeField(null=True, blank=True)
+    status = models.BooleanField(null = True, blank = True, default = True)
 
     def __str__(self):
-        return f"{self.title} - {self.author} - {self.genre} - {self.published_year} - {self.isbn} - {self.publisher} - {self.pages} - {self.language} - {self.description}"
+        return f"{self.title} - {self.author} - {self.genre} - {self.published_year} - {self.isbn} - {self.publisher} - {self.pages} - {self.language} - {self.description} - {self.status}"

@@ -15,4 +15,5 @@ class BookSerializer(serializers.ModelSerializer):
             'lenguage',
             'description',
             'cover_image',
+            'status'
         ] 

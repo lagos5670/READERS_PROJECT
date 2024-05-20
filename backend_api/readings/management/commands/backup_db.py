@@ -17,7 +17,8 @@ class Command(BaseCommand):
                  'pages': book.pages,
                  'language': book.language,
                  'description': book.description,
-                 'cover_image': book.cover_image_url,
+                 'cover_image': book.cover_image,
+                 'status':book.status
                  }
                 for book in books]
         with open('backup_db.json', 'w') as file:
